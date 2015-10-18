@@ -62,6 +62,12 @@ AvgStepbyInt <- aggregate(x = list(steps = dt$steps), by = list(interval = dt$in
 g1 <- ggplot(data = AvgStepbyInt, aes(x=interval, y=steps))
 g2 <- g1 + geom_line() + xlab("5-Minute Interval") + ylab("Average Number of Steps Taken Across All Days")
 g3 <- g2 + ggtitle("Time Series of Activity")
+g3
+```
+
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+
+```r
 maxint <- AvgStepbyInt[which.max(AvgStepbyInt$steps), ][1]
 maxstep <- AvgStepbyInt[which.max(AvgStepbyInt$steps), ][2]
 ```
